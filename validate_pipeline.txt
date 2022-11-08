@@ -1,0 +1,21 @@
+# Click the Variables button, above, to create your own variables.
+POST _ingest/pipeline/_simulate
+{
+  "pipeline": {
+    "processors": [
+      {
+        "dissect": {
+          "field": "message",
+          "pattern": "%{timestamp} :: %{version} :: %{module}:%{line} :: %{level} :: %{message}"
+        }
+      }
+    ]
+  }, 
+  "docs": [
+    {
+      "_source": {
+        "message": "2022-11-07T09:11:13,000+09:00 :: 0.9 :: keyboard:140 :: INFO :: {\"status\":404,\"Endpoint\":\"/blog/geekery/headless-wrapper-for-ephemeral-xservers.html\"}"
+      }
+    }
+  ]
+}

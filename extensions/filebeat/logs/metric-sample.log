@@ -1,0 +1,2 @@
+2022-11-07T09:11:13,000+09:00 :: 0.9 :: keyboard:140 :: INFO :: {"status":201,"Endpoint":"/articles/ppp-over-ssh/HTTP/1.1"}
+2022-11-07T09:18:13,090+09:00 :: 0.95 :: mouse:140 :: WARNING :: {"status":404,"Endpoint":"/blog/geekery/headless-wrapper-for-ephemeral-xservers.html"}

@@ -1,0 +1,17 @@
+# Click the Variables button, above, to create your own variables.
+PUT _ingest/pipeline/log-pipeline
+{
+  "description": "Parse Log", 
+  "processors": [
+    {
+      "dissect": {
+        "field": "message",
+        "pattern": "%{@timestamp} :: %{version} :: %{module}:%{line} :: %{level} :: %{message}"
+      },
+      "json": {
+        "field": "message",
+        "add_to_root": true
+      }
+    }
+  ]
+}
